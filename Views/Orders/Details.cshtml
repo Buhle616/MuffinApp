@@ -1,0 +1,82 @@
+﻿@model MuffinApp.Models.Orders
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Orders</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MuffinItems.MuffinName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MuffinItems.MuffinName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UniversityRole)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UniversityRole)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumMuffins)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumMuffins)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BasicCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BasicCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiscountAmt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiscountAmt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VatAmt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VatAmt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalCost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OrderNo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

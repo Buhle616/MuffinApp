@@ -1,0 +1,88 @@
+﻿@model MuffinApp.Models.Orders
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Orders</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MuffinItems.MuffinName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MuffinItems.MuffinName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UniversityRole)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UniversityRole)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumMuffins)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumMuffins)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BasicCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BasicCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiscountAmt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiscountAmt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VatAmt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VatAmt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalCost)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
